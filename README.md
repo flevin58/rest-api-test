@@ -2,10 +2,13 @@
 
 ## Introduction
 I was trying to learn parsing a REST API json data, and found the site https://dummyjson.com/products that gives back several json responses to practice deserialization.
-É
+
 ## My development environment
 
-![alt text](<Capto_Capture 2024-10-07_01-08-06_AM.png>)
+The zig version can be seen in the screenshot.
+
+![alt text](<Capto_Capture 2024-10-07_01-15-39_AM.png>)
+
 ## The error
 The program would not compile giving me the error shown below.
 My approach was to then start commenting the struct fields leaving only the first, then the first two ... and so on until I found the problem: apparently deserializing the field ```tags: [][]const u8``` the next field ```brand: []const u8,``` is not parsed.
